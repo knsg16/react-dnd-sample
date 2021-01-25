@@ -1,13 +1,9 @@
-import './App.css';
-import Knight from '../src/components/Knight'
-import Squere from '../src/components/Squere'
+import Main from '../src/components/Main'
 
 function App() {
   return (
     <div className="App">
-      <Squere>
-        <Knight/>
-      </Squere>
+      <Main/>
     </div>
   );
 }
