@@ -9,8 +9,8 @@ export default function Square({ black, children }) {
       style={{
         backgroundColor: fill,
         color: stroke,
-        width: '500px',
-        height: '500px'
+        width: '50px',
+        height: '50px'
       }}
     >
       {children}

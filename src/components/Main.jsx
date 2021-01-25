@@ -1,13 +1,8 @@
 import React from "react";
-import Knight from './Knight'
-import Squere from './Squere'
+import Board from './Board'
 
 export default function Main() {
   return (
-    <div>
-      <Squere black>
-        <Knight/>
-      </Squere>
-    </div>
+    <Board knightPosition={[0, 1]} />
   )
 }
