@@ -2,6 +2,9 @@ import React from 'react'
 import Square from './Square'
 import Knight from './Knight'
 import { moveKnight } from './Game'
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
+
 
 function renderSquare(i, [knightX, knightY]) {
   const x = i % 8
@@ -28,15 +31,17 @@ export default function Board({ knightPosition }) {
   }
 
   return (
-    <div
-      style={{
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        flexWrap: 'wrap'
-      }}
-    >
-      {squares}
-    </div>
+    <DndProvider backend={HTML5Backend}>
+      <div
+        style={{
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          flexWrap: 'wrap'
+        }}
+      >
+        {squares}
+      </div>
+    </DndProvider>
   )
 }
