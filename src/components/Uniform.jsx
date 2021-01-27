@@ -3,7 +3,7 @@ import { ItemTypes } from './Constants'
 import { useDrag } from 'react-dnd'
 import UniformImg from "./images/UniformImg";
 
-function Knight() {
+function Uniform() {
   const [{isDragging}, drag] = useDrag({
     item: { type: ItemTypes.KNIGHT },
     collect: monitor => ({
@@ -26,4 +26,4 @@ function Knight() {
   )
 }
 
-export default Knight
+export default Uniform
