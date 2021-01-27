@@ -1,8 +1,8 @@
-let knightPosition = [0, 0]
+let playerPosition = [0, 0]
 let observer = null
 
 function emitChange() {
-  observer(knightPosition)
+  observer(playerPosition)
 }
 
 export function observe(o) {
@@ -15,6 +15,6 @@ export function observe(o) {
 }
 
 export function movePlayer(toX, toY) {
-  knightPosition = [toX, toY]
+  playerPosition = [toX, toY]
   emitChange()
 }

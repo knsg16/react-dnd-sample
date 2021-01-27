@@ -1,5 +1,5 @@
 import React from 'react'
-import Uniform from './Uniform'
+import Player from './Player'
 import { DndProvider } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
 import BoardSquare from './BoardSquare'
@@ -18,11 +18,11 @@ function renderSquare(i, playerPosition) {
 
 function renderPiece(x, y, [playerX, playerY]) {
   if (x === playerX && y === playerY) {
-    return <Uniform />
+    return <Player />
   }
 }
 
-export default function Board({ playerPosition }) {
+export default function Board({ playerPosition}) {
   console.log(playerPosition);
   const squares = []
   for (let i = 0; i < 64; i++) {

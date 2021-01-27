@@ -6,7 +6,7 @@ import { useDrop } from 'react-dnd'
 
 function BoardSquare({ x, y, children }) {
   const [{ isOver }, drop] = useDrop({
-    accept: ItemTypes.KNIGHT,
+    accept: ItemTypes.PLAYER,
     drop: () => movePlayer(x, y),
     collect: monitor => ({
       isOver: !!monitor.isOver(),
