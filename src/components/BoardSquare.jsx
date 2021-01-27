@@ -5,7 +5,7 @@ import { ItemTypes } from './Constants'
 import { useDrop } from 'react-dnd'
 
 function BoardSquare({ x, y, children }) {
-  const black = (x + y) % 2 === 1
+  // const black = (x + y) % 2 === 1
   const [{ isOver }, drop] = useDrop({
     accept: ItemTypes.KNIGHT,
     drop: () => moveKnight(x, y),
@@ -23,7 +23,7 @@ function BoardSquare({ x, y, children }) {
         height: '100%',
       }}
     >
-      <Square black={black}>{children}</Square>
+      <Square>{children}</Square>
       {isOver && (
         <div
           style={{

@@ -23,23 +23,26 @@ function renderPiece(x, y, [knightX, knightY]) {
 }
 
 export default function Board({ knightPosition }) {
+  console.log(knightPosition);
   const squares = []
   for (let i = 0; i < 64; i++) {
     squares.push(renderSquare(i, knightPosition))
   }
 
   return (
-    <DndProvider backend={HTML5Backend}>
-      <div
-        style={{
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          flexWrap: 'wrap'
-        }}
-      >
-        {squares}
-      </div>
-    </DndProvider>
+    <div style={{ backgroundImage: "url(/field.png)", backgroundSize: "contain" }}>
+      <DndProvider backend={HTML5Backend}>
+        <div
+          style={{
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            flexWrap: 'wrap'
+          }}
+        >
+          {squares}
+        </div>
+      </DndProvider>
+    </div>
   )
 }
