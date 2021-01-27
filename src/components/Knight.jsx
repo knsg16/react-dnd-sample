@@ -1,6 +1,7 @@
 import React from 'react'
 import { ItemTypes } from './Constants'
 import { useDrag } from 'react-dnd'
+import UniformImg from "./images/UniformImg";
 
 function Knight() {
   const [{isDragging}, drag] = useDrag({
@@ -20,7 +21,7 @@ function Knight() {
         cursor: 'move',
       }}
     >
-      ♘
+      <UniformImg/>
     </div>
   )
 }
