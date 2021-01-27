@@ -1,32 +1,32 @@
 import React from 'react'
-import Knight from './Uniform'
+import Uniform from './Uniform'
 import { DndProvider } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
 import BoardSquare from './BoardSquare'
 
-function renderSquare(i, knightPosition) {
+function renderSquare(i, playerPosition) {
   const x = i % 8
   const y = Math.floor(i / 8)
   return (
     <div key={i} style={{ width: '12.5%', height: '12.5%' }}>
       <BoardSquare x={x} y={y}>
-        {renderPiece(x, y, knightPosition)}
+        {renderPiece(x, y, playerPosition)}
       </BoardSquare>
     </div>
   )
 }
 
-function renderPiece(x, y, [knightX, knightY]) {
-  if (x === knightX && y === knightY) {
-    return <Knight />
+function renderPiece(x, y, [playerX, playerY]) {
+  if (x === playerX && y === playerY) {
+    return <Uniform />
   }
 }
 
-export default function Board({ knightPosition }) {
-  console.log(knightPosition);
+export default function Board({ playerPosition }) {
+  console.log(playerPosition);
   const squares = []
   for (let i = 0; i < 64; i++) {
-    squares.push(renderSquare(i, knightPosition))
+    squares.push(renderSquare(i, playerPosition))
   }
 
   return (

@@ -14,7 +14,7 @@ export function observe(o) {
   emitChange()
 }
 
-export function moveKnight(toX, toY) {
+export function movePlayer(toX, toY) {
   knightPosition = [toX, toY]
   emitChange()
 }

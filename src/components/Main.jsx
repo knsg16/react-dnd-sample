@@ -8,8 +8,8 @@ const root = document.getElementById('root')
 
 export default function Main() {
   return (
-    observe((knightPosition) =>
-      ReactDOM.render(<Board knightPosition={knightPosition} />, root)
+    observe((playerPosition) =>
+      ReactDOM.render(<Board playerPosition={playerPosition} />, root)
     )
   )
 }
